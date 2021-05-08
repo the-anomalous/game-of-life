@@ -1,0 +1,51 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  
+  .title{
+    color: white;
+    margin: 10px 0 30px 0;
+
+    h1{
+      display: flex;
+      flex-direction: column;
+      font-size: 38px;
+
+      span{
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .routes{
+    color: white;
+    position: relative;
+
+    .home{
+      display: inline-block;
+      margin-right: 160px ;
+      cursor: pointer;
+      color: white;
+      text-decoration: none;
+
+      &:hover,
+      &:active {
+        box-shadow: 1px 1px 0px 1px;
+      }
+    }
+
+    .rules {
+      cursor: pointer;
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+      
+      &:hover, &:active {
+        box-shadow: 1px 1px 0px 1px;
+      }
+    }
+  }
+}
