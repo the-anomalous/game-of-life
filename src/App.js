@@ -11,11 +11,7 @@ function App() {
     <div className="app">
       <Header />
       <Switch>
-        < Route exact path = 'game-of-life/'
-        component = {
-          HomePage
-        }
-        />
+        <Route exact path='game-of-life/' component={HomePage} />
         < Route exact path = 'game-of-life/rules'
         component = {
           RulesPage
