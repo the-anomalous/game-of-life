@@ -10,15 +10,37 @@ import { cloneArray, play } from '../../utils'
 class Homepage extends Component {
   constructor() {
     super()
-
+    
     this.rows = 30;
     this.cols = 50;
-    this.speed = 300;
+    this.speed = 100;
 
     this.state = {
       generation: 0,
       gridFull: Array(this.rows).fill().map(() => Array(this.cols).fill(false))
     }
+  }
+
+  componentDidMount() {
+    if (window.innerWidth < 600) {
+      this.row = 27;
+      this.cols = 25
+    };
+  
+    if (window.innerWidth > 600 && window.innerWidth < 768) {
+      this.row = 30;
+      this.cols = 35;
+    }
+  
+    if (window.innerWidth > 768) {
+      this.row = 30;
+      this.cols = 50;
+    }
+    this.setState(state => ({
+      generation: 0,
+      gridFull: Array(this.rows).fill().map(() => Array(this.cols).fill(false))
+    }))
+    
   }
 
   selectBox = (row, col) => {
@@ -35,7 +57,6 @@ class Homepage extends Component {
     this.intervalId = setInterval(() => {
       const updatedGrid = play(this.state.gridFull, this.rows, this.cols)
       this.setState(prevState => ({
-        ...prevState,
         generation: prevState.generation + 1,
         gridFull: updatedGrid
       }))
@@ -102,6 +123,8 @@ class Homepage extends Component {
         this.speed = 300
         break;
     }
+
+    this.playButton()
   }
 
   render() {

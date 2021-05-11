@@ -13,4 +13,4 @@ const Box = ({boxClass, boxId, selectBox, row, col}) => {
   )
 }
 
-export default Box
+export default React.memo(Box)
