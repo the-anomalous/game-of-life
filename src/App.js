@@ -11,8 +11,16 @@ function App() {
     <div className="app">
       <Header />
       <Switch>
-        <Route exact path='/' component={HomePage} />
-        <Route exact path='/rules' component={RulesPage}/>
+        < Route exact path = 'game-of-life/'
+        component = {
+          HomePage
+        }
+        />
+        < Route exact path = 'game-of-life/rules'
+        component = {
+          RulesPage
+        }
+        />
       </Switch>
     </div>
   );
