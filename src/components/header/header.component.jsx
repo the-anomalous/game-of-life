@@ -12,8 +12,8 @@ const Header = () => {
         </h1>
       </div>
       <div className="routes">
-        <Link to='game-of-life/' className="route home">Home</Link>
-        <Link to='game-of-life/rules' className="route rules">Rules</Link>
+        <Link to='/' className="route home">Home</Link>
+        <Link to='/rules' className="route rules">Rules</Link>
       </div>
     </div>
   )
