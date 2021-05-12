@@ -12,7 +12,7 @@ function App() {
       <Header />
       <Switch>
         <Route exact path='/' component={HomePage} />
-        < Route exact path = '/rules'
+        <Route exact path = '/rules'
         component = {
           RulesPage
         }

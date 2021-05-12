@@ -19,10 +19,10 @@ const RulesPage = () => {
       <div className="rules section">
         <h3>Rules</h3>
         <ol>
-          <li>Any live cell with fewer than two live neighbours dies, as if by underpopulation.</li>
-          <li>Any live cell with two or three live neighbours lives on to the next generation.</li>
-          <li>Any live cell with more than three live neighbours dies, as if by overpopulation.</li>
-          <li>Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.</li>
+          <li>A live cell with less than two live neighbours dies, as if by underpopulation.</li>
+          <li>A live cell with two or three neighbours lives on to the next generation..</li>
+          <li>A live cell with more than tree neighbours dies, as if by overpopulation.</li>
+          <li>A dead cell with exactly three neighbours is reborn and becomes a live cell, as if by reproduction.</li>
         </ol>
       </div>
       <div className="patterns"></div>
