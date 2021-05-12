@@ -23,17 +23,17 @@ class Homepage extends Component {
 
   componentDidMount() {
     if (window.outerWidth < 375) {
-      this.rows = 23;
+      this.rows = 28;
       this.cols = 20;
     };
 
     if (window.outerWidth < 450 && window.outerWidth > 375) {
-      this.rows = 27;
+      this.rows = 28;
       this.cols = 25;
     };
     
     if (window.outerWidth < 600 && window.outerWidth > 450) {
-      this.rows = 27;
+      this.rows = 28;
       this.cols = 25;
     };
   
