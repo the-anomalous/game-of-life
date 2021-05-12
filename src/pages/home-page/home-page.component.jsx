@@ -22,17 +22,17 @@ class Homepage extends Component {
   }
 
   componentDidMount() {
-    if (window.innerWidth < 600) {
+    if (window.outerWidth < 600) {
       this.row = 27;
       this.cols = 25
     };
   
-    if (window.innerWidth > 600 && window.innerWidth < 768) {
+    if (window.outerWidth > 600 && window.outerWidth < 768) {
       this.row = 30;
       this.cols = 35;
     }
   
-    if (window.innerWidth > 768) {
+    if (window.outerWidth > 768) {
       this.row = 30;
       this.cols = 50;
     }
@@ -146,7 +146,6 @@ class Homepage extends Component {
           changeGridSize={this.changeGridSize}
           changeSpeed={this.changeSpeed}
         />
-        <h2>{window.outerWidth }</h2>
       </div>
     )
   }
