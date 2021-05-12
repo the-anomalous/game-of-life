@@ -19,21 +19,22 @@ class Homepage extends Component {
       generation: 0,
       gridFull: Array(this.rows).fill().map(() => Array(this.cols).fill(false))
     }
+    console.log(this.state.gridFull);
   }
 
   componentDidMount() {
     if (window.outerWidth < 600) {
-      this.row = 27;
-      this.cols = 25
+      this.rows = 27;
+      this.cols = 25;
     };
   
     if (window.outerWidth > 600 && window.outerWidth < 768) {
-      this.row = 30;
+      this.rows = 30;
       this.cols = 35;
     }
   
     if (window.outerWidth > 768) {
-      this.row = 30;
+      this.rows = 30;
       this.cols = 50;
     }
     this.setState(state => ({
@@ -146,6 +147,7 @@ class Homepage extends Component {
           changeGridSize={this.changeGridSize}
           changeSpeed={this.changeSpeed}
         />
+        <h2>{window.outerWidth }</h2>
       </div>
     )
   }
