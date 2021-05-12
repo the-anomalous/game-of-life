@@ -3,7 +3,13 @@
     margin: 5px 20px 10px 0;
   }
 
-  .grid-size{
+  .speed{
+    margin-right: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .grid-size {
     display: none;
   }
 }

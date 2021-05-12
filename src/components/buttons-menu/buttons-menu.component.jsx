@@ -20,9 +20,9 @@ const ButtonsMenu = ({ playButton, pauseButton, seed, clear, changeGridSize, cha
         {
           gridSize ? (
             <div className="grid-size container">
-              <button onClick={() => changeGridSize('small')} className='dropdown-btn small' >Small</button>
-              <button onClick={() => changeGridSize('medium')} className='dropdown-btn medium' >Medium</button>
-              <button onClick={() => changeGridSize('large')} className='dropdown-btn large' >Large</button>
+              <button onClick={() => { changeGridSize('small'); toggleGridSize(false) }} className='dropdown-btn small' >Small</button>
+              <button onClick={() => { changeGridSize('medium'); toggleGridSize(false)}} className='dropdown-btn medium' >Medium</button>
+              <button onClick={() => { changeGridSize('large');; toggleGridSize(false)}} className='dropdown-btn large' >Large</button>
             </div>
           ) : null
         }
@@ -30,9 +30,9 @@ const ButtonsMenu = ({ playButton, pauseButton, seed, clear, changeGridSize, cha
         {
           speed ? (
             <div className="speed-control container">
-              <button onClick={() => changeSpeed('slow')} className=' dropdown-btn slow' >Slow</button>
-              <button onClick={() => changeSpeed('normal')} className=' dropdown-btn normal' >Normal</button>
-              <button onClick={() => changeSpeed('fast')} className=' dropdown-btn fast'>Fast</button>
+              <button onClick={() => { changeSpeed('slow'); toggleSpeed(false)}} className=' dropdown-btn slow' >Slow</button>
+              <button onClick={() => { changeSpeed('normal'); toggleSpeed(false)}} className=' dropdown-btn normal' >Normal</button>
+              <button onClick={() => { changeSpeed('fast'); toggleSpeed(false)}} className=' dropdown-btn fast'>Fast</button>
             </div>
           ) : null
         }
