@@ -146,6 +146,7 @@ class Homepage extends Component {
           changeGridSize={this.changeGridSize}
           changeSpeed={this.changeSpeed}
         />
+        <h2>{ window.innerWidth }</h2>
       </div>
     )
   }
